@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qoute Generator</title>
+    <style>
+        body{
+
+            background-color: rgb(56, 115, 241);
+    display: flex;
+    width: 50%;
+    margin: 16px auto;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+        }
+        .container{
+            border:9px solid cyan;
+            height: 30.5rem;
+            width: 40rem;
+            background-color: white;
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            color: gray;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn1{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container"id="box1">
+       
+
+    </div>
+     <div class="btn1">
+    <button class="btn" id="clicked">Generate Qoute</button>
+</div>
+<script>
+   function quote(){
+    var quotes = [
+    ["Stay Hungry. Stay Foolish.", "Steve Jobs"],
+    ["Good Artists Copy, Great Artists Steal.", "Pablo Picasso"],
+    ["Argue with idiots, and you become an idiot.", "Paul Graham"],
+    ["Be yourself; everyone else is already taken.", "Oscar Wilde"],
+    ["Simplicity is the ultimate sophistication.", "Leonardo Da Vinci"]];
+    console.log(quotes);
+    var a =Math.floor(Math.random()*4);
+    var str="";
+    str+=quotes[a][0]+ '\n'+"-"+quotes[a][1];
+
+    document.getElementById("box1").innerText=str;
+   };
+    var clicked=document.getElementById("clicked");
+    clicked.addEventListener("click",quote);
+</script>
+</body>
+</html>
